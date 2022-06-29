@@ -25,8 +25,8 @@ samples, guidance on mobile development, and a full API reference.
 
 主要使用了[window_manager](https://pub.flutter-io.cn/packages/window_manager)插件   <https://pub.flutter-io.cn/packages/window_manager>  
 
-项目参考了[flutter-netease-music](https://github.com/boyan01/flutter-netease-music)项目  
+项目参考了[flutter-netease-music] <https://github.com/boyan01/flutter-netease-music>项目 感谢作者boyan01的开源贡献 
 
-我已把[flutter-netease-music](https://github.com/boyan01/flutter-netease-music)项目适配了flutter的3.0.3版本并推送到了GitLab <https://gitlab.com/codetown/flutter-music-player.git>  
+我已把[flutter-netease-music] <https://github.com/boyan01/flutter-netease-music>项目适配了flutter的3.0.3版本并推送到了GitLab <https://gitlab.com/codetown/flutter-music-player.git>  
 
 ## 如果该项目对您有用，欢迎来个star  
