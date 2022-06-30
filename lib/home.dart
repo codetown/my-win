@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mywin/components/move_area.dart';
+// import 'package:mywin/components/move_area.dart';
+import 'package:mywin/components/window_header.dart';
 import 'package:window_manager/window_manager.dart';
 
 class Home extends StatefulWidget {
@@ -110,97 +111,115 @@ class _HomeState extends State<Home> with WindowListener {
       // ),
       body: Column(
         children: <Widget>[
-          MoveArea(
+          // MoveArea(
+          //     height: 48.0,
+          //     child: Row(
+          //       children: <Widget>[
+          //         const Padding(
+          //           padding: EdgeInsets.only(left: 8.0, right: 8.0),
+          //           child: Icon(
+          //             Icons.flutter_dash,
+          //             color: Colors.blue,
+          //           ),
+          //         ),
+          //         const Expanded(
+          //             child: Text(
+          //           'Window应用程序',
+          //           style: TextStyle(
+          //               color: Colors.blue, fontWeight: FontWeight.bold),
+          //         )),
+          //         SizedBox(
+          //           width: 48,
+          //           height: 48,
+          //           child: PopupMenuButton(
+          //               padding: EdgeInsets.zero,
+          //               splashRadius: 20,
+          //               elevation: 2.0,
+          //               tooltip: '更多操作',
+          //               onSelected: (value) {
+          //                 // 选中的值
+          //               },
+          //               itemBuilder: (BuildContext context) =>
+          //                   <PopupMenuEntry<String>>[
+          //                     const PopupMenuItem(
+          //                       padding: EdgeInsets.only(
+          //                         left: 8.0,
+          //                         right: 8.0,
+          //                       ),
+          //                       height: 32.0,
+          //                       value: '这是增加',
+          //                       child: Text('第一个选项'),
+          //                     ),
+          //                     const PopupMenuItem(
+          //                       padding: EdgeInsets.only(
+          //                         left: 8.0,
+          //                         right: 8.0,
+          //                       ),
+          //                       height: 32.0,
+          //                       value: '这是删除',
+          //                       child: Text('第二个项'),
+          //                     )
+          //                   ],
+          //               child: const Icon(Icons.menu)),
+          //         ),
+          //         // 最小化按钮
+          //         SizedBox(
+          //           width: 48,
+          //           height: 48,
+          //           child: InkWell(
+          //             onTap: () async {
+          //               if (!await windowManager.isMinimized()) {
+          //                 windowManager.minimize();
+          //               }
+          //             },
+          //             child: const Icon(Icons.minimize_outlined),
+          //           ),
+          //         ),
+          //         // 最大化按钮
+          //         SizedBox(
+          //           width: 48,
+          //           height: 48,
+          //           child: InkWell(
+          //             onTap: () async {
+          //               if (await windowManager.isMaximized()) {
+          //                 windowManager.unmaximize();
+          //               } else {
+          //                 windowManager.maximize();
+          //               }
+          //             },
+          //             child: const Icon(Icons.square_outlined),
+          //           ),
+          //         ),
+          //         // 关闭按钮
+          //         SizedBox(
+          //           width: 48,
+          //           height: 48,
+          //           child: InkWell(
+          //             onTap: () {
+          //               windowManager.close();
+          //             },
+          //             hoverColor: Colors.red,
+          //             child: const Icon(Icons.close),
+          //           ),
+          //         ),
+          //       ],
+          //     )),
+          WindowHeader(
               height: 48.0,
               child: Row(
-                children: <Widget>[
-                  const Padding(
+                children: const [
+                  Padding(
                     padding: EdgeInsets.only(left: 8.0, right: 8.0),
                     child: Icon(
                       Icons.flutter_dash,
                       color: Colors.blue,
                     ),
                   ),
-                  const Expanded(
-                      child: Text(
+                  Text(
                     'Window应用程序',
                     style: TextStyle(
                         color: Colors.blue, fontWeight: FontWeight.bold),
-                  )),
-                  SizedBox(
-                    width: 48,
-                    height: 48,
-                    child: PopupMenuButton(
-                        padding: EdgeInsets.zero,
-                        splashRadius: 20,
-                        elevation: 2.0,
-                        tooltip: '更多操作',
-                        onSelected: (value) {
-                          // 选中的值
-                        },
-                        itemBuilder: (BuildContext context) =>
-                            <PopupMenuEntry<String>>[
-                              const PopupMenuItem(
-                                padding: EdgeInsets.only(
-                                  left: 8.0,
-                                  right: 8.0,
-                                ),
-                                height: 32.0,
-                                value: '这是增加',
-                                child: Text('第一个选项'),
-                              ),
-                              const PopupMenuItem(
-                                padding: EdgeInsets.only(
-                                  left: 8.0,
-                                  right: 8.0,
-                                ),
-                                height: 32.0,
-                                value: '这是删除',
-                                child: Text('第二个项'),
-                              )
-                            ],
-                        child: const Icon(Icons.menu)),
-                  ),
-                  // 最小化按钮
-                  SizedBox(
-                    width: 48,
-                    height: 48,
-                    child: InkWell(
-                      onTap: () async {
-                        if (!await windowManager.isMinimized()) {
-                          windowManager.minimize();
-                        }
-                      },
-                      child: const Icon(Icons.minimize_outlined),
-                    ),
-                  ),
-                  // 最大化按钮
-                  SizedBox(
-                    width: 48,
-                    height: 48,
-                    child: InkWell(
-                      onTap: () async {
-                        if (await windowManager.isMaximized()) {
-                          windowManager.unmaximize();
-                        } else {
-                          windowManager.maximize();
-                        }
-                      },
-                      child: const Icon(Icons.square_outlined),
-                    ),
-                  ),
-                  // 关闭按钮
-                  SizedBox(
-                    width: 48,
-                    height: 48,
-                    child: InkWell(
-                      onTap: () {
-                        windowManager.close();
-                      },
-                      hoverColor: Colors.red,
-                      child: const Icon(Icons.close),
-                    ),
-                  ),
+                  )
                 ],
               )),
           const Divider(
