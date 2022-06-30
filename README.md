@@ -4,7 +4,7 @@ Flutter开发桌面应用，自定义标题栏
 
 预览图如下  
 
-![预览图](/assets/home.png "预览图")
+![预览图](https://gitee.com/codetown/my-win/raw/master/assets/home.png "预览图")
 
 ## Getting Started
 
