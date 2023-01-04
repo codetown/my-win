@@ -18,8 +18,8 @@ class MusicItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(2.0),
         child: Image.network(
           imgUrl,
-          width: 48.0,
-          height: 48.0,
+          width: 40.0,
+          height: 40.0,
           fit: BoxFit.fill,
         ),
       ),
@@ -29,8 +29,8 @@ class MusicItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0),
-              height: 24.0,
+              padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 2.0),
+              height: 20.0,
               child: Text(
                 title,
                 maxLines: 1,
@@ -42,10 +42,10 @@ class MusicItem extends StatelessWidget {
               ),
             ),
             Container(
-              height: 24.0,
+              height: 20.0,
               alignment: Alignment.centerLeft,
               padding:
-                  const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 6.0),
+                  const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 2.0),
               child: Text(
                 subtitle,
                 maxLines: 1,
