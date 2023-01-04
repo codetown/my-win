@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mywin/home.dart';
+import 'package:myapp/home.dart';
 import 'package:window_manager/window_manager.dart';
 
 void main() async {
@@ -7,29 +7,38 @@ void main() async {
   // 必须加上这一行。
   await windowManager.ensureInitialized();
 
-  WindowOptions windowOptions = const WindowOptions(
-    size: Size(800, 500),
-    center: true,
-    backgroundColor: Colors.transparent,
-    skipTaskbar: false,
-    titleBarStyle: TitleBarStyle.hidden,
-  );
-  windowManager.waitUntilReadyToShow(windowOptions, () async {
+  // WindowOptions windowOptions = const WindowOptions(
+  //   size: Size(800, 500),
+  //   center: true,
+  //   backgroundColor: Colors.transparent,
+  //   skipTaskbar: false,
+  //   titleBarStyle: TitleBarStyle.hidden,
+  // );
+
+  // windowManager.waitUntilReadyToShow(windowOptions, () async {
+  //   await windowManager.show();
+  //   await windowManager.focus();
+  // });
+
+  windowManager.waitUntilReadyToShow().then((_) async {
+    // 隐藏窗口标题栏
+    await windowManager.setTitleBarStyle(TitleBarStyle.hidden);
+    await windowManager.setSize(const Size(800, 600));
+    await windowManager.center();
     await windowManager.show();
-    await windowManager.focus();
+    await windowManager.setSkipTaskbar(false);
   });
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'APP的名字',
+      title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -42,7 +51,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Home(title: '首页'),
+      home: const Home(title: 'Hello Music'),
     );
   }
 }

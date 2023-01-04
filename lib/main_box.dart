@@ -11,29 +11,29 @@ class MainBox extends StatelessWidget {
       Container(
         padding: const EdgeInsets.only(
             left: 16.0, top: 12.0, bottom: 12.0, right: 16.0),
-        height: 65.0,
+        height: 32.0,
         decoration: const BoxDecoration(
           color: Colors.white,
           border: Border(
             top: BorderSide(color: Color(0xFFEEEEEE), width: 1),
           ),
         ),
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 16.0),
-              child: Image.network(
-                  'https://gitlab.com/codetown/codedata/-/raw/master/avatars/avt108.jpg'),
-            ),
-            const Text(
-              "孙猴子",
-              style: TextStyle(
-                  fontSize: 18.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w600),
-            )
-          ],
-        ),
+        // child: Row(
+        //   children: [
+        //     Padding(
+        //       padding: const EdgeInsets.only(right: 16.0),
+        //       child: Image.network(
+        //           'https://gitlab.com/codetown/codedata/-/raw/master/avatars/avt108.jpg'),
+        //     ),
+        //     const Text(
+        //       "孙猴子",
+        //       style: TextStyle(
+        //           fontSize: 18.0,
+        //           color: Colors.black,
+        //           fontWeight: FontWeight.w600),
+        //     )
+        //   ],
+        // ),
       ),
       Expanded(
           child: Container(
@@ -43,6 +43,8 @@ class MainBox extends StatelessWidget {
             top: BorderSide(color: Color(0xFFEEEEEE), width: 1),
           ),
         ),
+        child: const Text("搜索结果"),
+        // child: ListView.separated(itemBuilder: itemBuilder, separatorBuilder: separatorBuilder, itemCount: itemCount),
       )),
     ]);
   }
